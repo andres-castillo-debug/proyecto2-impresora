@@ -1,16 +1,6 @@
 package clases;
 
-/**
- * Clase que representa un nodo dentro de la cola de prioridad (Montículo Binario).
- *
- * <p>Cada nodo contiene la información del documento enviado a imprimir
- * y una etiqueta de tiempo que determina su posición en el Min-Heap.
- * A menor etiqueta de tiempo, mayor prioridad en la cola.</p>
- *
- * <p>Importante: el nodo NO guarda información sobre el propietario del documento,
- * lo cual es intencional según el enunciado. La relación usuario-documento
- * se gestiona a través de la {@link estructura.HashTableUsuarios}.</p>
- */
+
 public class NodoPrioridad {
 
     /** El documento asociado a este nodo de la cola. */
@@ -46,13 +36,7 @@ public class NodoPrioridad {
      */
     public int getEtiquetaTiempo() { return etiquetaTiempo; }
 
-    /**
-     * Modifica la etiqueta de tiempo de este nodo.
-     * Se usa en la operación de eliminación de un documento de la cola,
-     * donde se le asigna Integer.MIN_VALUE para subirlo al tope del heap.
-     *
-     * @param etiqueta El nuevo valor de la etiqueta.
-     */
+   
     public void setEtiquetaTiempo(int etiqueta) { this.etiquetaTiempo = etiqueta; }
 
     /**
