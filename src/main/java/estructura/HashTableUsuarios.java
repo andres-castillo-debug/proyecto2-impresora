@@ -64,7 +64,7 @@ public class HashTableUsuarios {
         int indice     = funcionHash(usuario.getNombre());
         NodoHash nuevo = new NodoHash(usuario);
 
-        // Insertar al inicio de la cadena (O(1))
+       
         nuevo.siguiente = tabla[indice];
         tabla[indice]   = nuevo;
         totalUsuarios++;
@@ -121,7 +121,6 @@ public class HashTableUsuarios {
 
     /**
      * Retorna todos los usuarios almacenados en la tabla como arreglo.
-     * Útil para mostrar la lista de usuarios en la interfaz gráfica.
      *
      * @return Arreglo con todos los objetos Usuario.
      */
