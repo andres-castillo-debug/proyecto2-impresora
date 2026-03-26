@@ -1,21 +1,7 @@
 
 package clases;
 
-/**
- * Clase que representa un usuario en el sistema de simulación de impresión.
- *
- * <p>Cada usuario tiene un nombre único, un tipo de prioridad que determina
- * cuán rápido se atienden sus documentos prioritarios, y una lista interna
- * de documentos creados (implementada como arreglo sin librerías).</p>
- *
- * <p>Los tipos de prioridad válidos son:
- * <ul>
- *   <li>{@code prioridad_alta} — descuento de 20 unidades de tiempo</li>
- *   <li>{@code prioridad_media} — descuento de 10 unidades de tiempo</li>
- *   <li>{@code prioridad_baja} — descuento de 5 unidades de tiempo</li>
- * </ul>
- * </p>
- */
+
 public class Usuario {
 
     /** Nombre/identificador único del usuario. */
