@@ -6,17 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-/**
- * Clase central del sistema de simulación de cola de impresión.
- *
- * <p>Integra el {@link MonticuloBinario} (cola de prioridad) con la
- * {@link HashTableUsuarios} (acceso O(1) a usuarios) para gestionar
- * el flujo completo de documentos desde su creación hasta su impresión.</p>
- *
- * <p>El reloj interno mide el tiempo transcurrido desde el inicio de la
- * simulación. Cada vez que se envía un documento a imprimir, la etiqueta
- * de tiempo puede ser modificada según la prioridad del usuario.</p>
- */
+
 public class Simulador {
 
     /** Cola de impresión implementada como Montículo Binario (Min-Heap). */
@@ -40,10 +30,9 @@ public class Simulador {
         this.reloj         = 0;
     }
 
-    // =========================================================================
+   
     // GESTIÓN DE USUARIOS
-    // =========================================================================
-
+   
     /**
      * Registra un nuevo usuario en el sistema.
      *
@@ -116,9 +105,9 @@ public class Simulador {
                (errores > 0 ? ", " + errores + " línea(s) ignorada(s)." : ".");
     }
 
-    // =========================================================================
+   
     // GESTIÓN DE DOCUMENTOS
-    // =========================================================================
+
 
     /**
      * Crea un documento y lo agrega a la lista del usuario indicado.
@@ -149,15 +138,12 @@ public class Simulador {
         return u.eliminarDocumento(nombreDoc);
     }
 
-    // =========================================================================
+    
     // COLA DE IMPRESIÓN
-    // =========================================================================
+ 
 
     /**
-     * Envía un documento de un usuario a la cola de impresión.
-     *
-     * <p>Si es prioritario, la etiqueta de tiempo se reduce según el tipo de usuario:
-     * alta: -20, media: -10, baja: -5. Esto hace que el nodo suba en el Min-Heap.</p>
+     * Envía un documento de un usuario a la cola de impresión
      *
      * @param nombreUsuario Nombre del usuario propietario del documento.
      * @param nombreDoc     Nombre del documento a enviar.
@@ -204,8 +190,6 @@ public class Simulador {
 
     /**
      * Elimina un documento de la cola de impresión sin imprimirlo.
-     * Modifica su etiqueta a Integer.MIN_VALUE, lo sube al tope y lo extrae.
-     *
      * @param nombreDoc Nombre del documento a eliminar de la cola.
      * @return Mensaje de resultado.
      */
@@ -221,9 +205,9 @@ public class Simulador {
      */
     public void avanzarReloj() { this.reloj++; }
 
-    // =========================================================================
+   
     // GETTERS
-    // =========================================================================
+
 
     /**
      * Retorna la cola de impresión (Montículo Binario).

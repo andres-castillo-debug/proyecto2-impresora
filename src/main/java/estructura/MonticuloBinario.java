@@ -4,25 +4,6 @@ import clases.NodoPrioridad;
 
 /**
  * Implementación propia del TDA Montículo Binario (Min-Heap) sin librerías externas.
- *
- * <p>Estructura de datos utilizada como cola de prioridad para el sistema de impresión.
- * Se implementa mediante un arreglo de {@link NodoPrioridad}, aprovechando que
- * los árboles binarios completos pueden representarse sin punteros.</p>
- *
- * <p>Propiedades del Min-Heap mantenidas en todo momento:</p>
- * <ul>
- *   <li><b>Propiedad de forma:</b> árbol binario completo (lleno de izq. a der.).</li>
- *   <li><b>Propiedad de orden:</b> cada nodo tiene etiqueta ≤ que sus hijos.</li>
- * </ul>
- *
- * <p>Relaciones padre-hijo en el arreglo (índice base 0):</p>
- * <ul>
- *   <li>Padre del nodo i: {@code (i-1)/2}</li>
- *   <li>Hijo izquierdo de i: {@code 2*i+1}</li>
- *   <li>Hijo derecho de i: {@code 2*i+2}</li>
- * </ul>
- *
- * <p>Complejidad: insertar O(log n), eliminarMin O(log n).</p>
  */
 public class MonticuloBinario {
 
@@ -49,10 +30,6 @@ public class MonticuloBinario {
     /**
      * Inserta un nuevo nodo en el montículo (primitiva insertar).
      *
-     * <p>El nodo se agrega al final del arreglo (mantiene propiedad de forma)
-     * y luego sube hasta su posición correcta (mantiene propiedad de orden).
-     * Operación O(log n).</p>
-     *
      * @param nuevo El nodo de prioridad a insertar.
      * @return true si se insertó correctamente, false si el heap está lleno.
      */
@@ -66,10 +43,6 @@ public class MonticuloBinario {
 
     /**
      * Elimina y retorna el nodo con menor etiqueta de tiempo (primitiva eliminar_min).
-     *
-     * <p>El mínimo siempre está en heap[0]. Se reemplaza por el último elemento,
-     * se reduce el tamaño y se baja el nuevo nodo hasta su posición correcta.
-     * Operación O(log n).</p>
      *
      * @return El nodo con menor etiqueta (mayor prioridad), o null si el heap está vacío.
      */
@@ -85,13 +58,6 @@ public class MonticuloBinario {
 
     /**
      * Elimina un documento específico de la cola por nombre.
-     *
-     * <p>Como el montículo no soporta búsqueda directa, el proceso consiste en:</p>
-     * <ol>
-     *   <li>Localizar el nodo por nombre del documento (única excepción a no recorrer).</li>
-     *   <li>Asignarle la etiqueta Integer.MIN_VALUE para que suba al tope.</li>
-     *   <li>Llamar a eliminarMin() para extraerlo sin imprimirlo.</li>
-     * </ol>
      *
      * @param nombreDoc Nombre del documento a eliminar de la cola.
      * @return El nodo eliminado, o null si no se encontró.

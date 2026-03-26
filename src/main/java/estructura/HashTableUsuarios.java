@@ -2,19 +2,7 @@ package estructura;
 
 import clases.Usuario;
 
-/**
- * Implementación propia de una Tabla de Dispersión (Hash Table) para usuarios.
- *
- * <p>Permite acceso cercano a O(1) para buscar usuarios por nombre,
- * lo que es fundamental para localizar datos del propietario de un documento
- * que se desea eliminar de la cola, sin necesidad de recorrer el montículo.</p>
- *
- * <p>La función de dispersión aplica el método de división sobre el valor
- * hash del nombre del usuario. Las colisiones se resuelven mediante
- * <b>encadenamiento separado</b> (listas enlazadas en cada celda).</p>
- *
- * <p>Complejidad promedio: O(1) para insertar, buscar y eliminar.</p>
- */
+
 public class HashTableUsuarios {
 
     /** Tamaño de la tabla (número primo para reducir colisiones). */
@@ -85,7 +73,6 @@ public class HashTableUsuarios {
 
     /**
      * Busca y retorna un usuario por su nombre.
-     * Complejidad promedio O(1), O(n) en el peor caso (muchas colisiones).
      *
      * @param nombre El nombre del usuario a buscar.
      * @return El objeto Usuario encontrado, o null si no existe.
