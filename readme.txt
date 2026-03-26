@@ -5,9 +5,8 @@ como cola de prioridad y una Tabla de Dispersión (HashTable) para acceso O(1)
 a usuarios, permitiendo gestionar documentos con distintos niveles de prioridad.
 
 Integrantes:
-- [Nombre 1]
-- [Nombre 2]
-- [Nombre 3]
+- Santiago Rivero
+- Andrés Castillo
 
 Repositorio: https://github.com/[usuario]/proyecto2-impresion
 
