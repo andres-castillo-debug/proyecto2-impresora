@@ -9,13 +9,6 @@ import java.awt.*;
 /**
  * Panel que dibuja el Montículo Binario como árbol binario visual.
  *
- * <p>Extiende {@link JPanel} y sobreescribe {@code paintComponent} para
- * representar gráficamente el heap como un árbol binario completo,
- * respetando la propiedad de forma (nivel a nivel, de izquierda a derecha)
- * y mostrando las etiquetas de tiempo de cada nodo.</p>
- *
- * <p>Los nodos se colorean según su nivel en el árbol para facilitar
- * la comprensión visual de la estructura.</p>
  */
 public class DibujoArbol extends JPanel {
 
