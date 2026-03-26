@@ -110,9 +110,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         add(panelMain, BorderLayout.CENTER);
     }
 
-    // =========================================================================
+   
     // CONSTRUCCIÓN DE PANELES
-    // =========================================================================
+    
 
     /**
      * Crea la barra superior con título, reloj y botones de carga/guardado.
@@ -359,9 +359,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         return ley;
     }
 
-    // =========================================================================
+    
     // ACCIONES DE BOTONES
-    // =========================================================================
+   
 
     /** Carga usuarios desde un CSV seleccionado con JFileChooser. */
     private void accionCargarCSV() {
@@ -501,9 +501,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         actualizarCola();
     }
 
-    // =========================================================================
+    
     // ACTUALIZACIÓN DE VISTAS
-    // =========================================================================
+  
 
     /** Recarga la lista de usuarios en el JList correspondiente. */
     private void actualizarListaUsuarios() {
